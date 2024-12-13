@@ -1,7 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/conner-pierce/dev/' // Replace 'your-repo-name' with your GitHub repository name
+    ? '/dev/' // Replace 'your-repo-name' with your GitHub repository name
     : '/',
   transpileDependencies: true,
   chainWebpack: config => {
