@@ -3,17 +3,19 @@ module.exports = defineConfig({
   publicPath: process.env.NODE_ENV === 'production'
     ? '/dev/' // Replace 'your-repo-name' with your GitHub repository name
     : '/',
+    /*
     devServer: {
-      historyApiFallback: true,
-    },
-  transpileDependencies: true,
-  configureWebpack: {
-    resolve: {
-      alias: {
-        vue$: "vue/dist/vue.esm-bundler.js",
+          historyApiFallback: true,
+        },
+      transpileDependencies: true,
+      configureWebpack: {
+        resolve: {
+          alias: {
+            vue$: "vue/dist/vue.esm-bundler.js",
+          },
+        },
       },
-    },
-  },
+    */
   chainWebpack: config => {
     config.module
       .rule('pdf')

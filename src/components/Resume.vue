@@ -161,6 +161,7 @@ export default {
   methods: {
     downloadResume() {
       const link = document.createElement('a');
+      //link.href = '/Resume June 2024.pdf';
       link.href = '/Resume June 2024.pdf';
       link.download = 'ConnerPierceResume.pdf'; //default file name
       link.click();
