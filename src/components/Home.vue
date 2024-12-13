@@ -44,6 +44,7 @@ export default {
     isDarkMode: Boolean, // Receive the isDarkMode prop
   },
   data () {
+    console.log("sessionStorage: ",sessionStorage.getItem("showSplash"));
     if (!sessionStorage.getItem("showSplash")) {
         return {
           sessionStorageMirror: true,
