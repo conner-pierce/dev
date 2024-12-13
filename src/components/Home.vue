@@ -46,12 +46,14 @@ export default {
   data () {
     console.log("sessionStorage: ",sessionStorage.getItem("showSplash"));
     if (!sessionStorage.getItem("showSplash")) {
+        sessionStorage.setItem("showSplash",true)
         return {
           sessionStorageMirror: true,
           playHomeFade: true,
         };
       }
     else {
+      sessionStorage.setItem("showSplash",false)
       return {
         sessionStorageMirror: false,
         playHomeFade: false,
