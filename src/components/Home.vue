@@ -1,6 +1,6 @@
 <!-- src/components/Home.vue -->
 <template>
-  <div v-if="sessionStorageMirror" class="splash-screen" >
+  <div v-if="sessionStorageMirrorComputed" class="splash-screen" >
     <img class="splash-image-container" :src="currentImage" alt="Theme-Based logo" />
   </div>
   
@@ -61,6 +61,15 @@ export default {
     }
   },
   computed: {
+    sessionStorageMirrorComputed() {
+      let showSplash = sessionStorage.getItem("showSplash");
+      if (showSplash === null) {
+        sessionStorage.setItem("showSplash", true);
+        return true;
+      }
+      sessionStorage.setItem("showSplash", false);
+      return false;
+    },
     isSplashVisible() {
       return !sessionStorage.getItem("showSplash");
     },

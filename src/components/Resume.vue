@@ -39,7 +39,8 @@
           <div class="align-right">Tucson, AZ</div>
         </div>
         <div class="flex-container">
-          <div>Bachelor of Science - Electrical and Computer Engineering, GPA: 3.34</div>
+          <div>Bachelor of Science - Electrical and Computer Engineering</div>
+          <!-- , GPA: 3.34 -->
           <div class="align-right">August 2018 - May 2022</div>
         </div>
       </div>
@@ -161,7 +162,7 @@ export default {
   methods: {
     downloadResume() {
       const link = document.createElement('a');
-      //link.href = '/Resume June 2024.pdf';
+      //link.href = '/Resume June 2024.pdf'; no more require
       link.href = '/Resume June 2024.pdf';
       link.download = 'ConnerPierceResume.pdf'; //default file name
       link.click();
