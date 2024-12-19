@@ -1,6 +1,7 @@
 <!-- src/components/Home.vue -->
 <template>
-  <div v-if="sessionStorageMirrorComputed" class="splash-screen" >
+  <console class="log">sessionStorage at init: 'sessionStorag.getOtee</console>
+  <div v-if="sessionStorage.getItem('showSplash') === 'false'" class="splash-screen" >
     <img class="splash-image-container" :src="currentImage" alt="Theme-Based logo" />
   </div>
   
@@ -107,6 +108,9 @@ export default {
         sessionStorage.setItem("showSplash", false);
       }
     }
+  },
+  created() {
+  console.log("sessionStorage.showSplash: ", sessionStorage.getItem("showSplash"));
   },
   methods: {
     triggerHomeFadeIn() {
