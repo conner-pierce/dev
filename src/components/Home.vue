@@ -1,11 +1,14 @@
 <!-- src/components/Home.vue -->
 <template>
-  <console class="log">sessionStorage at init: 'sessionStorag.getOtee</console>
+<!--
   <div v-if="sessionStorage.getItem('showSplash') === 'false'" class="splash-screen" >
     <img class="splash-image-container" :src="currentImage" alt="Theme-Based logo" />
   </div>
-  
+  -->
+  <!--
   <div v-else class="home-page" :class="{'play-fade-in': playHomeFade}">
+  -->
+    <div class="home-page" :class="{'play-fade-in': playHomeFade}">
       <h1>Love You ^.^</h1>
       <p>
         This website was built to showcase my progress as a lifelong learner and professional. 
