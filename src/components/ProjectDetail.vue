@@ -8,7 +8,7 @@
         You are currently using the first project! This website was built to showcase my progress as a lifelong learner and professional. I have always wanted to make my own website; to create a space that is curated by no one other than myself. The visuals, style, and theme are the product of my personal taste and ability to follow through on a vision.
       </p>
       <p>
-        This is my first attempt at making a website. I started this project with little to no experience in working with website backend or frontend. I did however get a great tip from my partner to use Vuetify. Vuetify is a Vue component framework that allows for easy integration of HTML and CSS. In other words, Vuetify allows you to build the necessary components needed to make a website run all in one place, instead of working with separate languages and files. Getting started was one of the hardest parts of this entire project. Retrospectively, the instructions were really straightforward, but the first steps required using cmd to install the Vue CLI which really threw me off. My partner also helped me kick off the technical setup. We ran into a few different error codes when initially trying to access the website. As you will see more later, ChatGPT was crucial for bypassing technical error codes like this. In essence we needed to install a couple of extra packages, such as vuetify/styles and materialdesignicons.css to ensure proper compatibility. Having never coded in Vue, HTML, or CSS, having the ability to generate code through an LLM is one of the best use cases I have seen for these tools. Once the website was up and running every following step became easier and more rewarding. After getting the initial website up I took to pen and paper (on my IPad) to draft some high-level flow for the site. 
+        This is my first attempt at making a website. I started this project with little to no experience in working with website backend or frontend. I did however get a great tip from my partner to use Vuetify. Vuetify is a Vue component framework that allows for easy integration of HTML and CSS. In other words, Vuetify allows you to build the necessary components needed to make a website run all in one place, instead of working with separate languages and files. Getting started was one of the hardest parts of this entire project. Retrospectively, the instructions were really straightforward, but the first steps required using windows command prompt to install the Vue CLI which really threw me off. My partner also helped me kick off the technical setup. We ran into a few different error codes when initially trying to access the website. As you will see more later, ChatGPT was crucial for bypassing technical error codes like this. In essence we needed to install a couple of extra packages, such as vuetify/styles and materialdesignicons.css to ensure proper compatibility. Having never coded in Vue, HTML, or CSS, having the ability to generate code through an LLM is one of the best use cases I have seen for these tools. Once I was able to access my website from localhost in my browser every following step became easier and more rewarding. After getting the initial website up I took to pen and paper (on my IPad) to draft some high-level design for the site. 
       </p>
 
       <div class="image-row">
@@ -47,10 +47,8 @@
       <p>
         Now that the website had a framework, the remaining front end work consisted of either small detail adjustments or additional pieces of functionality and design. I’m going to focus on the functionality and design changes because smaller detail adjustments were fairly straightforward. Small changes consisted of implementing 
         <span id="special-font">new fonts from the internet,</span>
-        changing the style of the navigation bar to feel more modern, changing the behavior of hyperlinks to match the theme, 
-        <router-link to="/egg1" class="project-titleNew">
-          changing the behavior of hyperlinks to match the theme
-        </router-link>
+        changing the style of the navigation bar to feel more modern,
+        <router-link to="/egg1" class="project-titleNew">changing the behavior of hyperlinks to match the theme</router-link>
         and making a picture be selectable as a hyperlink.
 
       </p>
@@ -58,13 +56,31 @@
         /*Here we are going to go over 3 changes: The dark/light mode, the resume conversion from LATEX -> learning about row/col and flexbox, navbar dropdown*/
       </p>
       <p>
-        The real fun came with implementing new website features. 3 features in particular I had a challenge implementing: The dark-mode & light-mode toggle, the navigation bar dropdown that takes you directly to a project, and the conversion of my resume from LATEX into CSS & HTML.
+        The project momentum really started to pick up when working on new features. 3 features in particular I had challenges implementing: The dark-mode & light-mode toggle, the navigation bar dropdown that takes you directly to a project, and the conversion of my resume from LATEX into CSS & HTML.
       </p>
       <p>
         The toggle is what I implemented first. I personally prefer dark-mode, so I wanted to make sure when I worked on the website that I didn’t have to stare at light-mode the whole time. Prompt:
         <br>
         <em>What I am thinking is that in the nav bar there should be a pill shaped switch that can change the color of the nav bar, text, and background color of the page. </em>
+        <br>
+        I was able to get up and running quickly with a very standard pill shaped slider. The CSS animation for the white dot worked as intended, but the theme changing effect needed to be troubleshot. I asked ChatGPT to run through how the theme change functionality works and step by step I learned how the local storage theme variable, JavaScript watch and data functions, and conditional HTML logic determines which CSS class should be applied.
+
       </p>
+
+      <pre class="code-block" :class="{ 'code-block-dark': isDarkMode, 'code-block-light': !isDarkMode }">
+          <code class='language-javascript'>
+          data() {
+            return {
+              isDarkMode: false, // Set to false by default for light mode
+            };
+          },
+          watch: {
+            isDarkMode(newValue) {
+              // You can save the preference to local storage if needed
+              localStorage.setItem('isDarkMode', newValue);
+            }
+          }</code>
+        </pre>
 
       <p>/* Here is where more details go for the specific development of the aforementioned features: The dark-mode & light-mode toggle, the navigation bar dropdown that takes you directly to a project, and the conversion of my resume from LATEX into CSS & HTML. */
       </p>
@@ -84,7 +100,16 @@
 <script>
 export default {
   name: 'ProjectDetail',
+  props: {
+      isDarkMode: Boolean,
+  },
+  mounted() {
+    Prism.highlightAll();
+  },
 };
+import Prism from 'prismjs';
+
+
 </script>
 
 <style scoped>
@@ -121,7 +146,6 @@ export default {
   justify-content: space-between; /* Optional: adds space between images */
   gap: 1rem;           /* Adjust spacing between images */
   margin-top: 1rem;    /* Add some spacing above the image row */
-  
 }
 
 .project-image {
@@ -195,4 +219,27 @@ h1 {
   opacity: 1;
   transform: translateY(0);
 }
+
+.code-block {
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-left: -10px;
+}
+.code-block-light {
+  background-color: #ebebeb;
+  color: transparent;
+}
+
+.code-block-dark {
+  background-color: #2d2d2d; /* Dark background */
+  color: transparent; /* Light text color */
+}
+
+:deep(pre[class*="language-"]) {
+  text-shadow: none !important;
+  margin: none !important;
+  padding: 0 !important;
+}
+
 </style>

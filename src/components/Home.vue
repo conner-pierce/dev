@@ -9,7 +9,7 @@
   <div v-else class="home-page" :class="{'play-fade-in': playHomeFade}">
   -->
     <div class="home-page">
-      <h1>Love You ^.^</h1>
+      <h1>Welcome</h1>
       <p>
         This website was built to showcase my progress as a lifelong learner and professional. 
         I have always wanted to make my own website; to create a space that is curated by no-one other than myself.

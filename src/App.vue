@@ -42,13 +42,21 @@ export default {
   name: 'App',
   data() {
     return {
-      isDarkMode: true, // Set to true by default for dark mode
+      isDarkMode: false, // Set to true by default for dark mode
     };
   },
-    watch: {
+  watch: {
     isDarkMode(newValue) {
       // You can save the preference to local storage if needed
       localStorage.setItem('isDarkMode', newValue);
+      if (newValue) {
+        document.body.classList.add('prism-dark');
+        document.body.classList.remove('prism-light');
+      }
+      else {
+      document.body.classList.add('prism-light');
+      document.body.classList.remove('prism-dark');
+      } 
     }
   },
   mounted() {

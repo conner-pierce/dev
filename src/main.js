@@ -5,6 +5,10 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { createVuetify } from 'vuetify';
 import 'vuetify/styles';
 import '@mdi/font/css/materialdesignicons.css';
+import 'prismjs'
+import 'prismjs/themes/prism-solarizedlight.css'
+
+
 
 import Home from './components/Home.vue';
 import Projects from './components/Projects.vue';
