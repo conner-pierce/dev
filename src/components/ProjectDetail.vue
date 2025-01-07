@@ -13,22 +13,22 @@
 
       <div class="image-row">
         <div class="image-container">
-          <img src="/images/IMG_0160.PNG" alt="Pseudocode 1" class="project-image"/>
+          <img src="/images/IMG1.PNG" alt="Home Page Image" class="project-image"/>
           <div class="caption">Home</div>
         </div>
         <div class="image-container">
-          <img src="images/IMG_0161.PNG" alt="Pseudocode 2" class="project-image"/>
+          <img src="/images/IMG2.PNG" alt="Project Page Image" class="project-image"/>
           <div class="caption">Projects</div>
         </div>
         
       </div>
       <div class="image-row">
         <div class="image-container">
-          <img src="images/IMG_0162.PNG" alt="Pseudocode 1" class="project-image"/>
+          <img src="/images/IMG3.PNG" alt="Project Details Page Image" class="project-image"/>
           <div class="caption">This Page!</div>
         </div>
         <div class="image-container">
-          <img src="./images/IMG_0163.PNG" alt="Pseudocode 2" class="project-image"/>
+          <img src="/images/IMG4.PNG" alt="Style Brainstorm Image" class="project-image"/>
           <div class="caption">Style</div>
         </div>
       </div> 
@@ -106,6 +106,7 @@ export default {
   mounted() {
     Prism.highlightAll();
   },
+
 };
 import Prism from 'prismjs';
 
