@@ -17,18 +17,18 @@
           <div class="caption">Home</div>
         </div>
         <div class="image-container">
-          <img src="/images/IMG_0161.PNG" alt="Pseudocode 2" class="project-image"/>
+          <img src="images/IMG_0161.PNG" alt="Pseudocode 2" class="project-image"/>
           <div class="caption">Projects</div>
         </div>
         
       </div>
       <div class="image-row">
         <div class="image-container">
-          <img src="/images/IMG_0162.PNG" alt="Pseudocode 1" class="project-image"/>
+          <img src="images/IMG_0162.PNG" alt="Pseudocode 1" class="project-image"/>
           <div class="caption">This Page!</div>
         </div>
         <div class="image-container">
-          <img src="/images/IMG_0163.PNG" alt="Pseudocode 2" class="project-image"/>
+          <img src="./images/IMG_0163.PNG" alt="Pseudocode 2" class="project-image"/>
           <div class="caption">Style</div>
         </div>
       </div> 
