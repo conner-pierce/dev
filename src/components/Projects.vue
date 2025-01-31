@@ -17,7 +17,7 @@
     </p>
     <!-- Thumbnail Link -->
     <div class="image-container">
-      <router-link to="/projects/detail" class="image-link">
+      <router-link to="/dev/projects/detail" class="image-link">
         <img :src=currentImage alt="Project 1" class="image-sizing" />
       </router-link>
     </div>  

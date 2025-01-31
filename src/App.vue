@@ -3,20 +3,20 @@
     <header class="navbar">
       <nav>
         <!-- Home Button link -->
-        <router-link to="/" class="nav-link">Home</router-link>
+        <router-link to="/dev" class="nav-link">Home</router-link>
         
         <!-- Projects Dropdown -->
         <div class="nav-link nav-item dropdown">
-          <router-link to="/projects" class="nav-link">Projects</router-link>
+          <router-link to="/dev/projects" class="nav-link">Projects</router-link>
           <div class="dropdown-content">
-            <router-link to="/projects/detail" class="dropdown-link">Project 1</router-link>
+            <router-link to="/dev/projects/detail" class="dropdown-link">Project 1</router-link>
             <!--<a href="#" class="dropdown-link">Project 2</a>-->
             <!--More Project Links go here-->
           </div>
         </div>
 
         <!-- Resume Link -->
-        <router-link to="/resume" class="nav-link">Resume</router-link>
+        <router-link to="/dev/resume" class="nav-link">Resume</router-link>
 
         <!-- Theme Switch -->
         <div class="theme-switch">

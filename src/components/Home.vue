@@ -22,7 +22,7 @@
         
       </p>
       <div class="video-container">
-        <router-link to="/projects" class="thumbnail-link thumbnail-sizing">
+        <router-link to="/dev/projects" class="thumbnail-link thumbnail-sizing">
           <video :key="currentVideo" autoplay loop muted playsinline>
             <source :src="currentVideo" type="video/mp4" />
             Your browser does not support the video tag.
@@ -155,7 +155,7 @@ h1 {
   margin-bottom: 2rem;
   text-align: center;
 }
-h2{
+h2 {
   font-family: sans-serif;
   font-size: 6.5rem;
   margin-top: .5rem;
