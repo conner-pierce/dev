@@ -17,10 +17,10 @@ import Resume from './components/Resume.vue';
 
 // Define routes
 const routes = [
-  { path: '/', component: Home },
-  { path: '/projects', component: Projects },
-  { path: '/projects/detail', component: ProjectDetail },
-  { path: '/resume', component: Resume }
+  { path: '/dev', component: Home },
+  { path: '/dev/projects', component: Projects },
+  { path: '/dev/projects/detail', component: ProjectDetail },
+  { path: '/dev/resume', component: Resume }
 ];
 
 const router = createRouter({
