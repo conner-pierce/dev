@@ -1,12 +1,39 @@
 <template>
-  <div id="app">
   <div :class="isDarkMode ? 'dark-mode' : 'light-mode'">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/projects">Projects</router-link> |
-      <router-link to="/resume">Resume</router-link>
-    </nav>
-  </div>
+    <header class="navbar">
+      <nav>
+        <!-- Home Button link -->
+        <router-link to="/dev/" class="nav-link">Home</router-link>
+        
+        <!-- Projects Dropdown -->
+        <div class="nav-link nav-item dropdown">
+          <router-link to="/dev/projects/" class="nav-link">Projects</router-link>
+          <div class="dropdown-content">
+            <router-link to="/dev/projects/detail/" class="dropdown-link">Project 1</router-link>
+            <!--<a href="#" class="dropdown-link">Project 2</a>-->
+            <!--More Project Links go here-->
+          </div>
+        </div>
+
+        <!-- Resume Link -->
+        <router-link to="/dev/resume/" class="nav-link">Resume</router-link>
+
+        <!-- Theme Switch -->
+        <div class="theme-switch">
+        <label class="switch">
+          <input type="checkbox" v-model="isDarkMode" />
+          <span class="slider">
+            <span class="handle"></span>
+          </span>
+          </label>
+        </div>
+
+      </nav>
+
+    </header>
+    <main>
+      <router-view :is-dark-mode="isDarkMode"/>
+    </main>
   </div>
 </template>
 
@@ -41,19 +68,3 @@ export default {
   }
 };
 </script>
-
-<style>
-#app {
-  font-family: 'Arial', sans-serif; /* Use a more approachable font */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Stretch to full height */
-}
-main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Stretch to full height */
-}
-
-</style>
- 
