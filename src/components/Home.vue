@@ -56,7 +56,7 @@
   /* DEFINE WEB FONT */
   @font-face {
     font-family: Pinyon;
-    src: url('@/assets/Fonts/PinyonScript-Regular.ttf') format('truetype');
+    src: url('../assets/Fonts/PinyonScript-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   } 
