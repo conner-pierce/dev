@@ -50,9 +50,7 @@
   };
   </script>
     
-  <style scoped>
-
-  
+  <style scoped>  
   /* MAIN PAGE STYLING */
   /* MAIN PAGE STYLING */
   /* MAIN PAGE STYLING */
@@ -60,7 +58,6 @@
   p {
     font-family: 'Segoe UI Black Italic', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5rem;
-  
   }
   h1 {
     font-family: Pinyon, sans-serif;

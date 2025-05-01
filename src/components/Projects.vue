@@ -50,15 +50,6 @@ export default {
 </script>
 
 <style scoped>
-/* DEFINE WEB FONT */
-/* DEFINE WEB FONT */
-/* DEFINE WEB FONT */
-@font-face {
-  font-family: Pinyon;
-  src: url('@/assets/fonts/PinyonScript-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-} 
 
 /* MAIN PAGE STYLING */
 /* MAIN PAGE STYLING */
