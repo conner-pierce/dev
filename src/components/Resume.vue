@@ -20,11 +20,13 @@
           -->
           <button class="download-btn" @click="downloadResume">
         <!-- Transparent 1x1 image that prevents alt text from showing-->
-         <!-- :src= "isDarkMode ? DarkSprite : LightSprite"-->
+         <!-- :src= "isDarkMode ? DarkSprite : LightSprite"
+         :data-img="isDarkMode ? DarkSprite : LightSprite" 
+         -->
         <img 
           :class="{'download-icon-light': isDarkMode, 'download-icon-dark': !isDarkMode}" 
           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-          :data-img="isDarkMode ? DarkSprite : LightSprite"
+          
 
           @mouseenter="isHovered = true; console.log('isHovered on Hover:', isHovered)"
           @mouseleave="isHovered = false; console.log('isHovered on HoverExit:', isHovered)"
@@ -147,6 +149,7 @@ export default {
   props: {
       isDarkMode: Boolean, // Receive the isDarkMode prop
     },
+    /*
   data() {
     return {
       isHovered: false,
@@ -156,6 +159,7 @@ export default {
       resumePDF: resumePDF,
     };
   },
+  */
   methods: {
     downloadResume() {
       const link = document.createElement('a');
