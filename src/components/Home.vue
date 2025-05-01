@@ -14,7 +14,7 @@
           
         </p>
         <div class="video-container">
-          <router-link to="/dev/projects/" class="thumbnail-link thumbnail-sizing">
+          <router-link to="/projects/" class="thumbnail-link thumbnail-sizing">
             <video :key="currentVideo" autoplay loop muted playsinline>
               <source :src="currentVideo" type="video/mp4" />
               Your browser does not support the video tag.

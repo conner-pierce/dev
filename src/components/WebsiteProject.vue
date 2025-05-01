@@ -67,7 +67,7 @@
         I was able to get up and running quickly with a very standard pill shaped slider. The CSS animation for the white dot worked as intended, but the theme changing effect needed to be troubleshot. I asked ChatGPT to run through how the theme change functionality works and step by step I learned how the local storage theme variable, JavaScript watch and data functions, and conditional HTML logic determines which CSS class should be applied.
 
       </p>
-      <!--
+      
       <pre class="code-block" :class="{ 'code-block-dark': isDarkMode, 'code-block-light': !isDarkMode }">
           <code class="language-javascript">
           data() {
@@ -82,7 +82,7 @@
             }
           }</code>
         </pre>
-        -->
+        
       
 
       <p>/* Here is where more details go for the specific development of the aforementioned features: The dark-mode & light-mode toggle, the navigation bar dropdown that takes you directly to a project, and the conversion of my resume from LATEX into CSS & HTML. */
