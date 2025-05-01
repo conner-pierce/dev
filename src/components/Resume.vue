@@ -106,7 +106,7 @@
           <li>Optimized site performance and usability by solving technical challenges related to layout, design, and functionality.</li>
           <li>Developed the site as a practical learning experience as part of my passion for front-end development and long-term goal of becoming a full-stack developer.</li>
           <li>Gained proficiency in leveraging ChatGPT to troubleshoot issues, generate workflows, and enhance outcomes.</li>
-          <li>View the website: <a href="https://conner-pierce.github.io/dev/" target="_blank">conner-pierce.github.io/dev</a></li>
+          <li>View the website: <a href="https://conner-pierce.github.io/dev/" target="_blank">conner-pierce.github.io/dev/</a></li>
         </ul>
       </div>
 
@@ -140,7 +140,7 @@
 
 import DarkSprite from "@/assets/Sprites/DownloadDarkSprite.png";
 import LightSprite from "@/assets/Sprites/DownloadLightSprite.png";
-import resumePDF from "@/assets/PDFs/ConnerPierceResume.pdf";
+import resumePDF from "@/assets/PDFs/ConnerPierceResumeCorrect.pdf";
 
 export default {
   name: "Resume-page",
