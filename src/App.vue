@@ -9,7 +9,7 @@
         <div class="nav-link nav-item dropdown">
           <router-link to="/dev/projects/" class="nav-link">Projects</router-link>
           <div class="dropdown-content">
-            <router-link to="/dev/projects/detail/" class="dropdown-link">Project 1</router-link>
+            <router-link to="/dev/projects/website/" class="dropdown-link">conner.dev</router-link>
             <!--<a href="#" class="dropdown-link">Project 2</a>-->
             <!--More Project Links go here-->
           </div>
@@ -38,6 +38,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'App',
   data() {
@@ -48,6 +49,7 @@ export default {
   watch: {
     isDarkMode(newValue) {
       // You can save the preference to local storage if needed
+      
       localStorage.setItem('isDarkMode', newValue);
       if (newValue) {
         document.body.classList.add('prism-dark');
@@ -57,6 +59,7 @@ export default {
       document.body.classList.add('prism-light');
       document.body.classList.remove('prism-dark');
       } 
+      
     }
   },
   mounted() {

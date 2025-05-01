@@ -2,7 +2,7 @@
   <div class="home-page">
     <h1>Projects</h1>
     <hr />
-    <router-link to="/projects/detail/" class="project-title">
+    <router-link to="/dev/projects/website/" class="project-title">
       <h2>
         conner.dev
       </h2>
@@ -17,7 +17,7 @@
     </p>
     <!-- Thumbnail Link -->
     <div class="image-container">
-      <router-link to="/dev/projects/detail/" class="image-link">
+      <router-link to="/dev/projects/website/" class="image-link">
         <img :src=currentImage alt="Project 1" class="image-sizing" />
       </router-link>
     </div>  
