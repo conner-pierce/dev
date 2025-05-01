@@ -15,9 +15,9 @@
           </div>
         </div>
 
-        <!-- Resume Link -->
+        <!-- Resume Link 
         <router-link to="/dev/resume/" class="nav-link">Resume</router-link>
-
+        -->
         <!-- Theme Switch -->
         <div class="theme-switch">
         <label class="switch">
