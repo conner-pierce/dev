@@ -51,15 +51,7 @@
   </script>
     
   <style scoped>
-  /* DEFINE WEB FONT */
-  /* DEFINE WEB FONT */
-  /* DEFINE WEB FONT */
-  @font-face {
-    font-family: Pinyon;
-    src: url('../assets/Fonts/PinyonScript-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  } 
+
   
   /* MAIN PAGE STYLING */
   /* MAIN PAGE STYLING */
